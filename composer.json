@@ -1,0 +1,61 @@
+{
+  "name": "phpservicebus/persistence-doctrine1",
+  "description": "Doctrine 1 persistence for PHP Service Bus",
+  "keywords": [
+    "doctrine1",
+    "bus",
+    "service",
+    "service bus",
+    "command bus",
+    "cqrs"
+  ],
+  "homepage": "https://github.com/phpservicebus/persistence-doctrine1",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alex Farcas",
+      "email": "alex.farcas@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "phpservicebus/core": "~1",
+    "doctrine/doctrine1": "~1.2"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "2.4.1",
+    "phpunit/phpunit": "~4.8",
+    "bossa/phpspec2-expect": "~1",
+    "empi89/php-amqp-stubs": "dev-master",
+    "richardfullmer/rabbitmq-management-api": "1.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "PSB\\Persistence\\Doctrine1\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "acceptance\\PSB\\Persistence\\Doctrine1\\": "tests\\acceptance",
+      "acceptancesupport\\PSB\\Persistence\\Doctrine1\\": "tests\\acceptancesupport",
+      "spec\\PSB\\": "tests\\spec",
+      "specsupport\\PSB\\Persistence\\Doctrine1\\": "tests\\specsupport",
+      "commonsupport\\PSB\\Persistence\\Doctrine1\\": "tests\\commonsupport",
+      "specsupport\\PSB\\Core\\": "vendor\\phpservicebus\\core\\tests\\specsupport",
+      "acceptance\\PSB\\Core\\": "vendor\\phpservicebus\\core\\tests\\acceptance",
+      "acceptancesupport\\PSB\\Core\\": "vendor\\phpservicebus\\core\\tests\\acceptancesupport"
+    }
+  },
+  "scripts": {
+    "test": [
+      "phpspec run",
+      "phpunit"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-devel": "1.x-dev"
+    }
+  }
+}
