@@ -6,6 +6,10 @@ suites:
     spec_path: %paths.config%/tests
 extensions:
   - specsupport\PSB\Persistence\Doctrine1\PhpSpec\Extension\DoctrineFixtureExtension
+  - PhpSpec\Extension\CodeCoverageExtension
+code_coverage:
+  format: clover
+  output: coverage.clover
 doctrine_fixture_options:
   storage_configs:
     OUTBOX: # storage type as per PSB\Core\Persistence\StorageType::OUTBOX
