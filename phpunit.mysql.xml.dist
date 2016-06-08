@@ -43,7 +43,7 @@
                   file="vendor/phpservicebus/core/tests/acceptancesupport/PhpUnit/TestExecutionConfiguratorLoader.php">
             <arguments>
                 <string>acceptancesupport\PSB\Persistence\Doctrine1\Doctrine1TestExecutionConfigurator</string>
-                <string name="dsn">mysql://root:PASSWORD@127.0.0.1:3306/DATABASE</string>
+                <string name="dsn">mysql://root:@127.0.0.1:3306/servicebus</string>
                 <!--using a json encoding for the storage configs due to a bug in phpunit -->
                 <!--which does not handle nested arrays correctly-->
                 <string name="storage configs">
